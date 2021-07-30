@@ -14,7 +14,7 @@ code {
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
@@ -26,4 +26,8 @@ code {
 }
 .reminder {
   border-left: 5px solid green;
+}
+
+p {
+  word-break: break-all;
 }
