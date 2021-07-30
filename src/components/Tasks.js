@@ -2,7 +2,7 @@ import Task from './Task';
 
 const Tasks = ({ tasks, onDelete, onToggle }) => {
     return (
-        <div>
+        <div className="mx-auto" style={{maxWidth: '800px'}}>
             {tasks.map((task) => (
                 <Task 
                     key={task.id} 
