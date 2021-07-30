@@ -21,6 +21,7 @@ const AddTask = ({ onAdd }) => {
     return (
         <form className='m-3 p-4 justify-content-center' onSubmit={onSubmit}>
             <input 
+                data-testid="newTaskForm"
                 className='form-control my-1' 
                 type='text' 
                 placeholder='Add Task' 
@@ -37,6 +38,7 @@ const AddTask = ({ onAdd }) => {
             <div className='my-1 form-check'>
                     <input 
                         className='form-check-input'
+                        data-testid="reminderCheckbox"
                         type='checkbox'
                         checked={reminder}
                         value={reminder} 

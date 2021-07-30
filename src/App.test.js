@@ -1,8 +1,15 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import AddTask from './components/AddTask';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe("Add Task Form", () => {
+  test('Should open with checkbox empty', () => {
+    render(<AddTask />);
+
+    const taskForm = screen.getByTestId('newTaskForm');
+    const reminderInput = screen.getByTestId('reminderCheckbox');
+
+    expect(taskForm).toBeInTheDocument();
+    expect(reminderInput.nodeValue).toBe(null);
+  });
+})
+

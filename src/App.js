@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/shared/Header';
+import Footer from './components/shared/Footer';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
 import About from './components/About';
@@ -76,6 +76,8 @@ function App() {
   return (
     <Router>
       <div className="container mx-auto">
+        <p data-testid="abc">abc</p>
+
         <Header 
           name={name} 
           onAdd={() => setShowAddTask(!showAddTask)} 
