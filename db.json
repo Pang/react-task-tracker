@@ -9,7 +9,7 @@
     {
       "text": "qqqqq",
       "day": "aaaaa",
-      "reminder": true,
+      "reminder": false,
       "id": 3
     }
   ]

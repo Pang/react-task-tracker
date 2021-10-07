@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Header from './components/shared/Header';
 import Footer from './components/shared/Footer';
-import Tasks from './components/Tasks';
-import AddTask from './components/AddTask';
+import Tasks from './components/Tasks/Tasks';
+import AddTaskForm from './components/AddTaskForm/AddTaskForm';
 import About from './components/About';
 
 
@@ -76,8 +76,6 @@ function App() {
   return (
     <Router>
       <div className="container mx-auto">
-        <p data-testid="abc">abc</p>
-
         <Header 
           name={name} 
           onAdd={() => setShowAddTask(!showAddTask)} 
@@ -89,7 +87,7 @@ function App() {
           exact 
           render={(props) => (
             <>
-              {showAddTask && <AddTask onAdd={addTask} />}
+              {showAddTask && <AddTaskForm onAdd={addTask} />}
               { tasks.length > 0 
                 ? <Tasks 
                     tasks={tasks} 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const AddTask = ({ onAdd }) => {
+const AddTaskForm = ({ onAdd }) => {
     const [text, setText] = useState('');
     const [day, setDay] = useState('');
     const [reminder, setReminder] = useState(false);
@@ -19,7 +19,7 @@ const AddTask = ({ onAdd }) => {
     }
 
     return (
-        <form className='m-3 p-4 justify-content-center' onSubmit={onSubmit}>
+        <form style={{ maxWidth: '500px' }} className='m-3 p-4 mx-auto' onSubmit={onSubmit}>
             <input 
                 data-testid="newTaskForm"
                 className='form-control my-1' 
@@ -52,4 +52,4 @@ const AddTask = ({ onAdd }) => {
     )
 }
 
-export default AddTask;
+export default AddTaskForm;
